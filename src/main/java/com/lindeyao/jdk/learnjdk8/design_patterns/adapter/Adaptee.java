@@ -10,7 +10,7 @@ public class Adaptee {
 
     public void adapteeRequest() {
         System.out.println("被适配者的方法");
-
+        System.out.println("测试");
     }
 
 }
