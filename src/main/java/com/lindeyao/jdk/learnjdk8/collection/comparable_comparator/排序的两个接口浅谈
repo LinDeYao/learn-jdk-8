@@ -1,0 +1,21 @@
+分别为：Comparator(比较器) 和 Comparable(比较)
+先看两个接口源码：
+
+Comparator：分别有两个方法：
+int compare(T o1, T o2);
+boolean equals(Object obj);
+
+Comparable：
+public int compareTo(T o);
+
+两者都有compare方法，那么两者有什么不同点呢？
+
+
+
+
+
+
+
+
+
+
