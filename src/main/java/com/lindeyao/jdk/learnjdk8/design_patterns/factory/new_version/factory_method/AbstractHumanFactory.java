@@ -6,7 +6,7 @@ package com.lindeyao.jdk.learnjdk8.design_patterns.factory.new_version.factory_m
  * @author DeeLin
  * @create 2019-11-12 22:35
  */
-public abstract class AbstractHumanFactory {
+abstract class AbstractHumanFactory {
 
     // 创建对象的抽象方法
     public abstract <T extends Human> T createHuman(Class<T> tClass);

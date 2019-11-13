@@ -6,7 +6,7 @@ package com.lindeyao.jdk.learnjdk8.design_patterns.factory.new_version.factory_m
  * @author DeeLin
  * @create 2019-11-12 22:36
  */
-public class HumanFactory extends AbstractHumanFactory {
+class HumanFactory extends AbstractHumanFactory {
 
     @Override
     public <T extends Human> T createHuman(Class<T> tClass) {

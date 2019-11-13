@@ -9,7 +9,7 @@ package com.lindeyao.jdk.learnjdk8.design_patterns.factory.new_version.factory_m
 public class Client {
 
     public static void main(String[] args) {
-        // 获取创建人类这一种产品的工厂实例
+        // 获取创建人类这一种产品的具体工厂实例
         AbstractHumanFactory abstractHumanFactory = new HumanFactory();
         // 生产白种人
         Human whiteHuman = abstractHumanFactory.createHuman(WhiteHuman.class);
@@ -41,4 +41,6 @@ public class Client {
      *       2：当需要灵活的、可扩展的框架时，可考虑采用工厂方法模式。
      *
      */
+
+
 }
