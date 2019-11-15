@@ -1,8 +1,8 @@
-package com.lindeyao.jdk.learnjdk8.design_patterns.factory.new_version.factory_simple;
+package com.lindeyao.jdk.learnjdk8.design_patterns.factory.factory_simple;
 
-import com.lindeyao.jdk.learnjdk8.design_patterns.factory.new_version.factory_method.Human;
-import com.lindeyao.jdk.learnjdk8.design_patterns.factory.new_version.factory_method.WhiteHuman;
-import com.lindeyao.jdk.learnjdk8.design_patterns.factory.new_version.factory_method.YellowHuman;
+import com.lindeyao.jdk.learnjdk8.design_patterns.factory.factory_method.Human;
+import com.lindeyao.jdk.learnjdk8.design_patterns.factory.factory_method.WhiteHuman;
+import com.lindeyao.jdk.learnjdk8.design_patterns.factory.factory_method.YellowHuman;
 
 /**
  * 场景调用类(简单工厂)

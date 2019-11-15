@@ -1,4 +1,4 @@
-package com.lindeyao.jdk.learnjdk8.design_patterns.factory.new_version.factory_method;
+package com.lindeyao.jdk.learnjdk8.design_patterns.factory.factory_method;
 
 /**
  * 制造人类的抽象工厂类(针对的是人类这一种产品)

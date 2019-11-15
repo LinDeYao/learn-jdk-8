@@ -1,4 +1,4 @@
-package com.lindeyao.jdk.learnjdk8.design_patterns.factory.new_version.factory_method;
+package com.lindeyao.jdk.learnjdk8.design_patterns.factory.factory_method;
 
 /**
  * 白色人种(对应具体产品)

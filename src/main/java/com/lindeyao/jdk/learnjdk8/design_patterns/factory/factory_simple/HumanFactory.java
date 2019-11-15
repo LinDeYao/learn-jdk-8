@@ -1,6 +1,6 @@
-package com.lindeyao.jdk.learnjdk8.design_patterns.factory.new_version.factory_simple;
+package com.lindeyao.jdk.learnjdk8.design_patterns.factory.factory_simple;
 
-import com.lindeyao.jdk.learnjdk8.design_patterns.factory.new_version.factory_method.Human;
+import com.lindeyao.jdk.learnjdk8.design_patterns.factory.factory_method.Human;
 
 /**
  * 专门生产人类（单一种产品）的简单工厂
