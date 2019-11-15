@@ -1,4 +1,0 @@
-工厂模式分3种：
-    1：简单工厂模式  -- 查看 Factory_Simple 类
-    2：工厂模式(工厂方法模式，应用最广泛)  -- 查看 Factory_Simple 类
-    3：抽象工厂模式  -- 查看 Factory_Simple 类
