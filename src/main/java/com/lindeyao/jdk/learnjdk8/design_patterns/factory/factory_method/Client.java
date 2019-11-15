@@ -1,7 +1,7 @@
 package com.lindeyao.jdk.learnjdk8.design_patterns.factory.factory_method;
 
 /**
- * 场景类
+ * 场景类（标准的工厂方法模式）
  *
  * @author DeeLin
  * @create 2019-11-12 22:53

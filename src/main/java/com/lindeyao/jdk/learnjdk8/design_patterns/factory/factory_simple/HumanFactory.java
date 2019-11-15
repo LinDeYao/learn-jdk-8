@@ -4,7 +4,8 @@ import com.lindeyao.jdk.learnjdk8.design_patterns.factory.factory_method.Human;
 
 /**
  * 专门生产人类（单一种产品）的简单工厂
- * 实体类，没有继承或者实现抽象工厂
+ * 只有实体类，没有继承或者实现抽象工厂
+ * 而且方法是static，开放出去了
  *
  * @author ldy
  * @create 2019-11-13 12:41

@@ -1,6 +1,7 @@
 package com.lindeyao.jdk.learnjdk8.design_patterns.factory.factory_method;
 
 /**
+ * 标准的工厂方法模式
  * 制造人类的抽象工厂类(针对的是人类这一种产品)
  *
  * @author DeeLin
