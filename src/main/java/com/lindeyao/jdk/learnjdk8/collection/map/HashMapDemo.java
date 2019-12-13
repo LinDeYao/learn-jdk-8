@@ -14,6 +14,7 @@ public class HashMapDemo {
 
         // 测试
         Map hashMap = new HashMap();
+        //hashMap.put(null, "2");  // key和value都可以为null
         hashMap.put("3", "Value3");
         hashMap.put("1", "Value1");
         hashMap.put("2", "Value2");

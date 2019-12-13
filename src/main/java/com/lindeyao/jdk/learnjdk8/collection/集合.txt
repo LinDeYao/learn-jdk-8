@@ -1,0 +1,28 @@
+
+Map键值对总结：
+
+HashMap：
+    1：内部维护一个 数组+链表结构(1.7版本)， 数组+链表、数组+红黑树(1.8版本)
+    2：插入和读取，顺序无序，效率高
+    3：可以插入key和value都为null
+    4：线程不安全
+
+
+HashTable:(比较少用了，效率低，ConcurrentHahsMap可以替代)
+    1：插入和读取都加上了同步(synchronize),线程安全
+    2：效率低
+    3：key和value都不能为null
+
+
+LinkedHashMap：
+    1：内部维护一个双向链表
+    2：插入和读取，有序，效率比HashMap低
+    3：插入key和value都可以为null
+    4：线程不安全
+
+
+TreeMap：
+    1：内部维护了红黑树
+    2：实现了根据key进行排序规则(排序规则可以从构造函数传递进去)，key有序
+    3：key不能为null，value可以
+

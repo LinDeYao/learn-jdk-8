@@ -15,6 +15,9 @@ public class TreeMapDemo {
     public static void main(String[] args) {
 
         Map<String, String> map = new TreeMap<>();
+        // 可以插入值为空的数据
+        //map.put("s", null);  // 可以
+        //map.put(null, ""s);  // 报错
         map.put("a","dd");
         map.put("k", "ff");
         map.put("cc", "cc");
