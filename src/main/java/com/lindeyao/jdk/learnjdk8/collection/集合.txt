@@ -26,3 +26,6 @@ TreeMap：
     2：实现了根据key进行排序规则(排序规则可以从构造函数传递进去)，key有序
     3：key不能为null，value可以
 
+
+ConcurrentHashMap：
+    1：线程安全
