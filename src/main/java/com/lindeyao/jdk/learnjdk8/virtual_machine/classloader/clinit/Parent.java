@@ -1,4 +1,4 @@
-package com.lindeyao.jdk.learnjdk8.virtual_machine.classloader;
+package com.lindeyao.jdk.learnjdk8.virtual_machine.classloader.clinit;
 
 /**
  * 初始化阶段Demo，父类
