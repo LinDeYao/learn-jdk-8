@@ -1,6 +1,7 @@
 package com.lindeyao.jdk.learnjdk8.timeutil;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -15,6 +16,8 @@ public class InstantTest {
         // Instant 和 Date 一样，表示一个时间戳，用于描述一个时刻。
         Instant instant = Instant.now();
         System.out.println("Instant 表示当前时间：" + instant);
+        LocalDateTime localDateTime = LocalDateTime.now();
+        System.out.println(localDateTime);
         Instant ofEpochSecondInstant = Instant.ofEpochSecond(10, 100);
         System.out.println("Instant ofEpochSecond 10秒+100纳秒为：" + ofEpochSecondInstant);
         Date date = new Date();
