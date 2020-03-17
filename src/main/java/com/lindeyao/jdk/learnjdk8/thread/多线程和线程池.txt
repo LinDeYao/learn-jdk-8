@@ -4,3 +4,6 @@
 1：线程可以复用
 2：避免了线程创建和销毁的性能开销
 3：线程的创建跟具体任务的执行是完全分开的
+
+
+线程基础学习链接：https://blog.csdn.net/Evankaka/article/details/44153709

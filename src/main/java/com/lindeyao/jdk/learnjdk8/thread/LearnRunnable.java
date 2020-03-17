@@ -3,6 +3,8 @@ package com.lindeyao.jdk.learnjdk8.thread;
 /**
  * 学习多线程 Runnable，实现Runnable接口。
  *
+ * 基础学习链接：https://blog.csdn.net/Evankaka/article/details/44153709
+ *
  * @author DeeLin
  * @create 2020-03-15 16:20
  */
