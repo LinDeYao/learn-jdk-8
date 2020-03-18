@@ -10,6 +10,8 @@ import java.util.concurrent.atomic.AtomicInteger;
  *
  * 典型的生产者、消费者模式
  *
+ * 最后面还有考试题：线程A执行0，线程B执行1，线程C执行3。。。
+ *
  * @author ldy
  * @create 2020-03-18 13:56
  */
@@ -32,7 +34,7 @@ public class WaitNotifyAndNotifyall {
             synchronized (lock) {
                 // 无线循环
                 while (true) {
-                    // 当生产数量超过限制时，生产线程加入 lock 等待池中，暂停生产
+                    // 当生产数量超过限制时，生产线程加入 lock 等待队列中，暂停生产
                     if (count > 9) {
                         try {
                             System.out.println("唤醒消费者 consumer");
@@ -110,32 +112,10 @@ public class WaitNotifyAndNotifyall {
         thread3.start();
         thread4.start();
 
+        // 主线程暂停，直到调用join()的线程执行完，才执行主线程
+        // 从结果来看，就是将thread1和thread22合并到主线程中(join：也是加入的意思)，执行完才执行调用他们的线程。
         thread1.join();
         thread2.join();
-    }
-
-
-    public static void main(String[] args) throws InterruptedException {
-
-        // 网上示例1
-        /*SynchLock lock = new SynchLock();
-        PrintA a = new PrintA(lock,"A","B");
-        PrintA b = new PrintA(lock,"B","C");
-        PrintA c = new PrintA(lock,"C","A");
-        a.start();
-        b.start();
-        c.start();*/
-
-
-        // 网上示例2
-        AtomicInteger synObj = new AtomicInteger(0);
-        TestPrint a = new TestPrint(synObj, "A", 0);
-        TestPrint b = new TestPrint(synObj, "B", 1);
-        TestPrint c = new TestPrint(synObj, "C", 2);
-
-        a.start();
-		b.start();
-		c.start();
     }
 
 
@@ -205,16 +185,16 @@ public class WaitNotifyAndNotifyall {
         @Override
         public void run() {
             while (true) {
-                synchronized (synObj) {//锁同一个对象
-                    if (synObj.get() % 3 == flag) {//等 于自己
-                        synObj.set(synObj.get() + 1);
-                        System.out.println(name);
+                synchronized (synObj) {//锁同一个对象，那么无论执行多少个线程，只有一个线程可以进来
+                    if (synObj.get() % 3 == flag) {//等于自己
+                        System.out.println(name + "执行：" + synObj.get());
+                        synObj.addAndGet(1);
                         count++;
-                        synObj.notifyAll();
+                        synObj.notifyAll();  // 唤醒所有等待队列中的线程，重新进入竞争锁的锁池当中(只有一个线程可以拿到锁)。
                         if (count == 10) {
                             break;
                         }
-                    } else {
+                    } else { // 其他对象，都进入等待队列中
                         try {
                             synObj.wait();
                         } catch (InterruptedException e) {
@@ -225,6 +205,26 @@ public class WaitNotifyAndNotifyall {
                 }
             }
         }
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        // 网上示例1
+        /*SynchLock lock = new SynchLock();
+        PrintA a = new PrintA(lock,"A","B");
+        PrintA b = new PrintA(lock,"B","C");
+        PrintA c = new PrintA(lock,"C","A");
+        a.start();
+        b.start();
+        c.start();*/
+
+        // 网上示例2
+        AtomicInteger synObj = new AtomicInteger(0);
+        TestPrint a = new TestPrint(synObj, "A", 0);
+        TestPrint b = new TestPrint(synObj, "B", 1);
+        TestPrint c = new TestPrint(synObj, "C", 2);
+        a.start();
+        b.start();
+        c.start();
     }
 
 }
