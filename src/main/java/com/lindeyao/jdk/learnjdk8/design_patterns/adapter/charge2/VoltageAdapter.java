@@ -11,6 +11,7 @@ import com.lindeyao.jdk.learnjdk8.design_patterns.adapter.charge.Voltage5;
  */
 public class VoltageAdapter implements Voltage5 {
 
+    // 采用引用的关联关系(依赖关系--组合关系)
     private Voltage220 voltage220;
 
     public VoltageAdapter(Voltage220 voltage220) {
