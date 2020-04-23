@@ -2,6 +2,7 @@ package com.lindeyao.jdk.learnjdk8.design_patterns.builder.starbucks;
 
 /**
  * 建造者模式--导演类--顾客
+ * 导演类： 顾名思义，可以对不同的组件进行控制，包括顺序和零件是否需要。并指导建造者进行建造，组装对象。
  *
  * @author DeeLin
  * @create 2020-04-11 22:08
