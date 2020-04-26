@@ -22,3 +22,5 @@ wait(),notify(),notifyall(): 这三个都是Object类的方法，而不是Thread
 
 
 问题：为什么synchronized能实现线程同步？
+首先，我们需要先了解两个概念："Java对象头"、"Monitor":
+Java对象头
