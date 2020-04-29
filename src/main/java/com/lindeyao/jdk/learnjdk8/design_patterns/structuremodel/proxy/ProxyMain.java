@@ -31,6 +31,8 @@ public class ProxyMain {
         /**
          * JDK提供的Proxy类,它能够根据传递进来的Class复制出Class,比如它的一个静态方法：getProxyClass，能根据 类加载器和接口Class，复制一份内部结构跟接口一致的Class
          * 根据复制出来的Class副本对象，创建与目标类(委托类)一样的对象
+         *
+         * 修正上面的理解： Proxy的getProxyClass方法会使用 类加载器跟对应的接口的Class对象
          */
         Class sellProxyClazz = Proxy.getProxyClass(ProxyMain.class.getClassLoader(), Sell.class);
         try {
