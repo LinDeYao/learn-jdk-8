@@ -1,4 +1,4 @@
-package com.lindeyao.jdk.learnjdk8.design_patterns.template;
+package com.lindeyao.jdk.learnjdk8.design_patterns.structuremodel.template;
 
 /**
  * H2型号悍马模型

@@ -1,4 +1,4 @@
-package com.lindeyao.jdk.learnjdk8.design_patterns.template;
+package com.lindeyao.jdk.learnjdk8.design_patterns.structuremodel.template;
 
 /**
  * 场景调用类
