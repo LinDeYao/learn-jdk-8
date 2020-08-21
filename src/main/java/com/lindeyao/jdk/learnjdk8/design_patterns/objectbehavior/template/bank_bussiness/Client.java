@@ -1,4 +1,4 @@
-package com.lindeyao.jdk.learnjdk8.design_patterns.structuremodel.template.bank_bussiness;
+package com.lindeyao.jdk.learnjdk8.design_patterns.objectbehavior.template.bank_bussiness;
 
 /**
  * 模板方法--场景调用类

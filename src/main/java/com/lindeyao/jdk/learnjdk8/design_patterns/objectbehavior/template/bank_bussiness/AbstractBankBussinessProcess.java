@@ -1,4 +1,4 @@
-package com.lindeyao.jdk.learnjdk8.design_patterns.structuremodel.template.bank_bussiness;
+package com.lindeyao.jdk.learnjdk8.design_patterns.objectbehavior.template.bank_bussiness;
 
 /**
  * 模板方法--银行业务流程抽象: 具体业务：取号排队 -> 办理具体业务 -> 对银行工作人员进行评分

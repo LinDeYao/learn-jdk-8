@@ -1,4 +1,4 @@
-package com.lindeyao.jdk.learnjdk8.design_patterns.structuremodel.template;
+package com.lindeyao.jdk.learnjdk8.design_patterns.objectbehavior.template;
 
 /**
  * 模板方法--抽象模型(例子为悍马模型)
