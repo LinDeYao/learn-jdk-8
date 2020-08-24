@@ -8,6 +8,7 @@ package com.lindeyao.jdk.learnjdk8.design_patterns.structuremodel.facede.powerSu
  */
 public class MainClass {
 
+    // 这里代码的实现不是很好，所有的对象的操作都应该是针对接口编程来编写，这里主要为了门面模式，省去了这一点。
     public static void main(String[] args) {
         // 在没有门面对象的情况下，关闭所有电源
         new Fridge().turnOff();
