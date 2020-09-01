@@ -1,0 +1,17 @@
+多线程工具类：CountDownLatch(计数器)、CyclicBarrier、Semaphore（信号量、许可）
+从两个方面总结下三者的区别：
+一：从底层实现上：
+CountDownLatch: 内部使用了AbstractQueuedSynchronizer类，维护一个int类型的state状态量；线程执行countDown()方法，底层会采用CAS进行state递减操作；
+                而调用await()方法的线程，只有等到state计数器的值为0时（进行倒数），才会被执行，否则会一直阻塞着。
+CyclicBarrier: 内部使用ReentrantLock可重入锁机制和一个int类型的count状态量，这个类只提供了一个比较重要的await()方法，该方法会先上锁保证并发安全,并将
+               count值进行递减，只有当count的值为0时，所有调用await()方法的线程才可以继续执行
+Semaphore: 内部也是使用了AbstractQueuedSynchronizer类并维护一个int类型的state状态量，这个与CountDownLatch一致。它提供了acquire()方法，底层会采用CAS进行state递减操作；
+           如果state状态量为0，则调用该方法的线程会被阻塞。提供了release()方法，采用CAS进行state的递增操作，并通知在该对象上阻塞的线程。
+
+二：从功能上来区分：
+CountDownLatch:就相当于一个计数器，当某个线程需要等待(直接调用await()方法进行阻塞)其他线程完成之后(线程完成之后就调用countDown()方法进行倒数，等倒数的值为0之后)，再执行自己的业务逻辑。
+CyclicBarrier:主要功能是多个线程都需要达到某个条件或状态之后（线程在到达条件之后，调用await()方法进行等待，并进行count值减1），多个线程才继续往下执行自己的业务逻辑（只有当count值为0时，所有调用wait()方法的线程才会继续执行）。
+              简单点说，就是协助多个线程都达到某个状态后，再全部开始执行自己的逻辑。
+Semaphore:相当于一个信号量，需要执行的线程先去获取一个执行许可证（也就是执行acquire()方法，会进行state减1），由于许可证的有限性，当拿不到许可时（此时，state值为0），当前线程等待。
+          等到什么时候呢？等到其他线程执行完自己的业务的时候，他会调用release()方法释放一个许可。相当于用完了还回去,那在等待获取许可的线程就有机会重新获得许可。
+          简单点说：就是限制并发执行的线程的数量。
