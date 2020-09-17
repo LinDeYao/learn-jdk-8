@@ -12,7 +12,7 @@ import java.util.Observer;
 class Client {
 
     public static void main(String[] args) {
-        // 新建一个主题(被观察者)
+        // 新建一个主题(通知者)
         MyObservable observable = new MyObservable();
         // 新建一个观察者
         Observer observer = new MyObserver();

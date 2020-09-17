@@ -6,7 +6,7 @@ import lombok.Setter;
 import java.util.Observable;
 
 /**
- * JDK自带的被观察者类
+ * JDK自带的通知者类
  *
  * @author ldy
  * @create 2020-05-02 22:44
